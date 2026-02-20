@@ -17,12 +17,12 @@ jobs:
         run: git pull origin main
       
       - name: Stop containers
-        run: docker compose down
+        run: docker-compose down
       
       - name: Build and start containers
         run: |
-          docker compose build
-          docker compose up -d
+          docker-compose build
+          docker-compose up -d
       
       - name: Verify services
-        run: docker compose ps
+        run: docker-compose ps
