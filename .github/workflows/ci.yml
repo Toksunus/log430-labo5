@@ -16,6 +16,9 @@ jobs:
       - name: Pull latest changes
         run: git pull origin main
       
+      - name: Create Docker network
+        run: docker network create labo05-network || true
+      
       - name: Stop containers
         run: docker-compose down
       
